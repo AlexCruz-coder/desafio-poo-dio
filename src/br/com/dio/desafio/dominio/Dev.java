@@ -21,6 +21,20 @@ public class Dev {
             System.err.println("VocÃª nÃ£o estÃ¡ matriculado em nenhum conteÃºdo!");
         }
     }
+    
+	public void postarDuvida(Forum forum) {
+		conteudosConcluidos.add(forum);	//Ganha ponto postando ou respondendo dúvidas
+	}
+	
+	public void responderDuvida(Forum forum) {
+		
+		if(!forum.isStatus()) {
+			conteudosConcluidos.add(forum); //Ganha ponto postando ou respondendo dúvidas
+			forum.setStatus(true);
+		} else {
+			System.out.println("Dúvida já foi respondida");
+		}
+	}
 
     public double calcularTotalXp() {
         Iterator<Conteudo> iterator = this.conteudosConcluidos.iterator();

@@ -51,6 +51,10 @@ public class Bootcamp {
         return conteudos;
     }
 
+    public void setConteudo(Conteudo conteudo) {
+    	this.conteudos.add(conteudo);
+    }
+    
     public void setConteudos(Set<Conteudo> conteudos) {
         this.conteudos = conteudos;
     }
